@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/menu/menu",
+    "pages/find/find",
+    "pages/user/user",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/author/author"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF6262",
+    "navigationBarTitleText": "古诗脑风暴",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#FF6262",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tuijian.png",
+        "selectedIconPath": "images/tuijian_hl.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "iconPath": "images/shici.png",
+        "selectedIconPath": "images/shici_hl.png",
+        "text": "诗词"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_hl.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

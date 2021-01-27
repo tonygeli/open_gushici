@@ -1,0 +1,4 @@
+<view class='author'>
+  <view class='name'>{{detail.name}}</view>
+  <view class="text">{{detail.desc}}</view>
+</view>

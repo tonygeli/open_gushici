@@ -1,0 +1,12 @@
+/* miniprogram/pages/author.wxss */
+.author {
+  padding: 30rpx;
+  font-size: 32rpx;
+}
+.name {
+  text-align: center;
+  margin-bottom: 15rpx;
+}
+.text {
+  line-height: 1.6;
+}

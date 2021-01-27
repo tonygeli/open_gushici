@@ -1,0 +1,45 @@
+<!-- miniprogram/pages/detail/detail.wxml -->
+<view class='detail' wx:if='{{isExist && isDown}}'>
+  <view class='title'>{{detail.title}}</view>
+  <view class="poet">
+    <view>{{detail.dynasty}}</view>
+    <view class="name" data-author='{{detail.author}}' bindtap='goPoet' >{{detail.author}}</view>
+  </view>
+  <view class="poem">
+    <text wx:for='{{detail.paragraphs}}' wx:key='index'>{{item}}</text>
+  </view>
+  <view class="tags">
+    <text wx:for='{{detail.tags}}' wx:key='index' data-parenttags='标签' data-tags='{{item}}' bindtap='goList'>{{item}}</text>
+  </view>
+  <view class="more">
+    <view class='topTabSwiper'>
+      <view class='tab tabBorer' data-current="1" bindtap='checkCurrent'>
+        注释
+      </view>
+    </view>
+    <view class='swiper'>
+      <view class='itembox showItem'>
+        <view wx:for='{{detail.notes}}' wx:key='index'>{{item}}</view>
+        <view wx:if='{{!detail.notes.length}}'>暂无注释</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 首页 -->
+<view class='backhome' bindtap='onBackhome'>
+  <image src='/images/nav/index-active.png'></image>
+  <text>回首页</text>
+</view>
+
+<!-- 分享 -->
+<view class='share'>
+  <image src='/images/share.png'></image>
+  <text>分享</text>
+  <button open-type='share'></button>
+</view>
+
+
+<view class='no-list' wx:if="{{!isExist}}" style='text-align:center;font-size:24rpx;padding:30rpx;'>
+  <text style='color:#666;'>--- 未找到 ---</text>
+</view>

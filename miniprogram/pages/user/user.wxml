@@ -1,0 +1,21 @@
+<!-- miniprogram/pages/user/user.wxml -->
+<view class='user'>
+  <view class='name'>
+    <image src='{{avatarUrl}}'></image>
+    <button class="userinfo-nickname" wx:if="{{!logged}}" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">
+      点此登录
+    </button>
+    <text>{{username}}</text>
+  </view>
+  <view class='box'>
+    <view class='item' data-openid='{{openid}}' bindtap='goAbout'>
+      <view class='item-inner'>
+        <view>关于</view>
+      </view>
+      <i class="wx-icon-custom-gengduo"></i>
+    </view>
+    <view class='addApp' wx:if="{{showImg}}" bindtap='hideImg'>
+      <image src='/images/add3.png'></image>
+    </view>
+  </view>
+</view>
